@@ -18,9 +18,9 @@ let seconds = 00;
 let startTimer;
 startBtn.addEventListener('click', () => {
     if (!startTimer) {
-        startTimer = setInterval(timer, 100);
+        startTimer = setInterval(timer, 1000);
     } else {
-        alert("Você já completou todos os ciclos, volte ao início e comece outro ciclo.")
+        alert("Cronômetro iniciado, aguarde o fim do ciclo atual.")
     }
 })
 
