@@ -11,11 +11,21 @@ const screenTimerSeconds = document.getElementById('timer-sec');
 screenTimerMinutes.innerText = data.workTime;
 screenTimerSeconds.innerText = "00";
 
-let startTimer;
+let timerState;
+let pausedMinSec;
+
 startBtn.addEventListener('click', () => {
-    if (!startTimer) {
-        startTimer = setInterval(timer, 10);
+    if (!timerState) {
+        startBtn.innerHTML = "&#8214";
+        timerState = setInterval(timer, 1000);
+
+    } else if (timerState === 'paused') {
+        resumeTimer(...pausedMinSec);
+
+    } else if (timerState === 'end') {
+        alert("Você completou todos os ciclos, volte ao início e defina novos ciclos.");
+
     } else {
-        alert("Cronômetro iniciado, aguarde o fim do ciclo atual.")
+        pausedMinSec = pauseTimer();
     }
 })
