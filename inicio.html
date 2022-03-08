@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Pomodoro | Home</title>
+
+    <script src="https://kit.fontawesome.com/31994b352d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Pomodoro</h1>
+        </header>
+
+        <main>
+            <form>
+                <div class="input-group">
+                    <label for="work-time">Minutos</label>
+                    <input type="number" min="0" max="59" name="work-time" id="work-time" value="25">
+                </div>
+                <div class="input-group">
+                    <label for="break-time">Descanso(min)</label>
+                    <input type="number" min="5" max="15" name="break-time" id="break-time" value="5">
+                </div>
+                <div class="input-group">
+                    <label for="rounds">Ciclos</label>
+                    <input type="number" min="1" max="5" name="rounds" id="rounds" value="3">
+                </div>
+            </form>
+
+            <a href="pomodoro.html" id="start">Continuar</a>
+
+        </main>
+    </div>
+
+    <script src="getData.js"></script>
+</body>
+
+</html>
