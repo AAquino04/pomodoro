@@ -2,6 +2,7 @@
 const title = document.querySelector("main .work-info h2");
 const innerTimer = document.querySelector("main .inner-timer");
 const roundBullets = document.querySelectorAll("main .rounds span");
+
 // Elementos do DOM para o timer
 const startBtn = document.getElementById('start');
 const screenTimerMinutes = document.getElementById('timer-min');
@@ -19,12 +20,13 @@ let timerState;
 let pausedMinSec;
 
 // Seta timer para valores iniciais vindos da home;
-screenTimerMinutes.innerText = String(data.workTime).padStart(2, "0");
+screenTimerMinutes.innerText = String(workTime).padStart(2, "0");
 screenTimerSeconds.innerText = String(seconds).padStart(2, "0");
 
 startBtn.addEventListener('click', () => {
     if (!timerState) {
         startBtn.innerHTML = "&#8214";
+
         timerState = setInterval(timer, 1000);
 
     } else if (timerState === 'paused') {
