@@ -1,9 +1,15 @@
+:root {
+    --dark-blue: #333853;
+    --light-blue: #3C4262;
+    --gray: #a3a6b5;
+}
+
 * { box-sizing: border-box; }
 
 body {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    background-color: #333853;
+    background-color: var(--dark-blue);
 }
 
 /* Home  */
@@ -11,7 +17,7 @@ header h1 {
     margin-bottom: 3rem;
     font-size: 3rem;
     font-weight: 700;
-    color: #a3a6b5;
+    color: var(--gray);
 }
 
 .container, .container-pomodoro {
@@ -42,10 +48,10 @@ main form .input-group input {
     margin-bottom: 1rem;
     text-align: center;
     border-radius: 10px;
-    color: #a3a6b5;
+    color: var(--gray);
     font-size: 3rem;
     font-weight: 700;
-    background-color: #3C4262;
+    background-color: var(--light-blue);
     border: none;
     box-shadow: 7px 4px 5px #00000061;
 }
@@ -53,7 +59,7 @@ main form .input-group input {
 main form .input-group label {
     font-weight: 400;
     font-size: 1.2rem;
-    color: #a3a6b5;
+    color: var(--gray);
 }
 
 a {
@@ -63,13 +69,13 @@ a {
     padding: 25px 60px;
     border-radius: 10px;
     box-shadow: 7px 4px 5px #00000061;
-    background-color: #3C4262;
+    background-color: var(--light-blue);
     font-size: 1.75rem;
     font-weight: 700;
-    color: #a3a6b5;
+    color: var(--gray);
 }
 
-a:hover { background-color: #333853; }
+a:hover { background-color: var(--dark-blue); }
 
 /* Pomodoro */
 .header-pomodoro {
@@ -85,7 +91,7 @@ a:hover { background-color: #333853; }
 main .outer-timer {
     height: 250px;
     width: 260px;
-    background-color: #3C4262;
+    background-color: var(--light-blue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,7 +112,7 @@ main .inner-timer {
 main .outer-timer span {
     font-size: 3rem;
     font-weight: 700;
-    color: #a3a6b5;
+    color: var(--gray);
 }
 
 .pomodoro-main {
@@ -140,13 +146,13 @@ main .outer-timer span {
     padding: 20px 30px;
     font-size: 2rem;
     font-weight: 700;
-    background-color: #3C4262;
+    background-color: var(--light-blue);
     border: none;
     box-shadow: 7px 4px 5px #00000061;
     border-radius: 10px;
-    color: #a3a6b5;
+    color: var(--gray);
     cursor: pointer;
 }
 
-.work-info button:hover { background-color: #333853; }
+.work-info button:hover { background-color: var(--dark-blue); }
 
